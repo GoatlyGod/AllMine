@@ -1,42 +1,52 @@
-import React from 'react';
-import USVI from '../assets/USVI.jpg';
+import React from "react";
+import Navbar from "../components/Navbar";
+import STX from '../assets/STX.jpg';
+import STT from '../assets/STT.jpg';
+import STJ from '../assets/STJ.jpg'
+import InfoCard from "../components/InfoCard";
+import Footer from "../components/Footer"
+
+
+import "./Home.css"
 
 
 const Home = () => {
-    return (
-        <React.Fragment>
-        <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel">
+  return (
+      <React.Fragment>
+        <Navbar />
+        <div id="carouselExampleControls" className="Pop carousel slide" data-ride="carousel">
             <div className="carousel-inner">
-                <div className="carousel-item active" data-interval="10000">
-                    <img src="..." className="d-block w-100" alt="..."/>
-                </div>
-                <div className="carousel-item" data-interval="2000">
-                    <img src={USVI} className="d-block w-100" alt="..."/>
+                <div className="carousel-item active">
+                    <img src={STX} className="d-block w-100" alt="..."/>
+                    <div className="carousel-caption d-none d-md-block">
+                        <h1>St. Croix</h1>
+                    </div>
                 </div>
                 <div className="carousel-item">
-                    <img src="..." className="d-block w-100" alt="..."/>
+                    <img src={STT} className="d-block w-100" alt="..."/>
+                </div>
+                <div className="carousel-item">
+                    <img src={STJ} className="d-block w-100" alt="..."/>
+                    <div className="carousel-caption d-none d-md-block">
+                        <h1>St. John</h1>
+                    </div>
                 </div>
             </div>
-            <a className="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="sr-only">Previous</span>
             </a>
-            <a className="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="sr-only">Next</span>
             </a>
             </div>
 
-        <div className="card" style={{ width: "18rem" }}>
-            <img src="https://i.ytimg.com/vi/av0PNCWD0EQ/maxresdefault.jpg" className="card-img-top" alt="..."/>
-            <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        </React.Fragment>
-    )
-}
+       <InfoCard />
+       <Footer />
+
+      </React.Fragment>
+  );
+};
 
 export default Home;
